@@ -99,3 +99,16 @@ body {
     gap: 1rem;
     line-height: 0.5;
 }
+
+@media only screen and (max-width: 500px) {
+    .weather-container{
+        width: 250px;
+    }
+    .search input{
+        width: 10rem;
+    }
+    .detail-icons{
+        width: 2rem;
+        height: 2rem;
+    }
+}
