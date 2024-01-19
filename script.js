@@ -10,6 +10,29 @@ async function getWeather(cityName){
     document.querySelector(".weather").innerHTML = data.weather[0].main;
     document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
     document.querySelector(".wind-speed").innerHTML = Math.round(data.wind.speed) + " km/h";
+
+    const weatherIcon = document.querySelector(".weather-icon");
+
+    switch(data.weather[0].main){
+        case "Clouds":
+            weatherIcon.src = "./images/clouds.png";
+            break;
+        case "Clear":
+            weatherIcon.src = "./images/clear.png";
+            break;
+        case "Drizzle":
+            weatherIcon.src = "./images/drizzle.png";
+            break;
+        case "Mist":
+            weatherIcon.src = "./images/mist.png";
+            break;
+        case "Snow":
+            weatherIcon.src = "./images/snow.png";
+            break;
+        case "Rain":
+            weatherIcon.src = "./images/rain.png";
+            break;
+    }
 }
 
 function getCityName(){
